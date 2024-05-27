@@ -30,6 +30,15 @@ const Ocorrencias = mongoose.model('Ocorrencias', {
 //porta definida
 app.listen(8000);
 
+
+//get padrao
+
+app.get('/', (request, response) => {
+    return response.json({
+        nome : "Victor Noronha",
+        idade : "18"
+    });
+});
 //primeira request
 app.get('/usuario', async (req, res) => {
     const usuario = await Usuario.find()
